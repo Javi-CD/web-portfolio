@@ -39,15 +39,15 @@ This project is a personal web portfolio developed with Next.js and React, desig
 
 ## Technologies Used
 
-| Technology   | Version | Purpose                           |
-| ------------ | ------- | --------------------------------- |
-| Next.js      | 14.2.15 | React framework with SSR          |
-| React        | 18      | User interface framework          |
-| Tailwind CSS | 3.4.1   | Utility-first CSS framework       |
-| ESLint       | 8       | JavaScript linter                 |
-| Prettier     | 3.0.0   | Code formatter                    |
-| Husky        | 9.1.7   | Git hooks                         |
-| CommitLint   | 19.8.1  | Commit message validation         |
+| Technology   | Version | Purpose                     |
+| ------------ | ------- | --------------------------- |
+| Next.js      | 14.2.15 | React framework with SSR    |
+| React        | 18      | User interface framework    |
+| Tailwind CSS | 3.4.1   | Utility-first CSS framework |
+| ESLint       | 8       | JavaScript linter           |
+| Prettier     | 3.0.0   | Code formatter              |
+| Husky        | 9.1.7   | Git hooks                   |
+| CommitLint   | 19.8.1  | Commit message validation   |
 
 ## Installation and Setup
 
@@ -86,9 +86,9 @@ This project is a personal web portfolio developed with Next.js and React, desig
 
 | Script                 | Description                                |
 | ---------------------- | ------------------------------------------ |
-| `npm run dev`          | Starts the Next.js development server     |
+| `npm run dev`          | Starts the Next.js development server      |
 | `npm run build`        | Builds the application for production      |
-| `npm run start`        | Starts the production server              |
+| `npm run start`        | Starts the production server               |
 | `npm run lint`         | Runs ESLint                                |
 | `npm run lint:fix`     | Runs ESLint and fixes errors automatically |
 | `npm run format`       | Formats code with Prettier                 |
