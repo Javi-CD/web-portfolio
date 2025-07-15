@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const ContactForm = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   const handleChange = (e) => {
     setFormData({
@@ -20,21 +22,60 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // EmailJS configuration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    setIsSubmitting(false);
+      // Check if environment variables are set
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          'EmailJS configuration is missing. Please check your environment variables.'
+        );
+      }
 
-    // You can add actual form submission logic here
-    console.log('Form submitted:', formData);
+      // Template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: process.env.NEXT_PUBLIC_TO_NAME || 'Recipient',
+        date: new Date().toLocaleDateString('es-ES', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      // Success - Reset form and show success message
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+      setSubmitStatus('success');
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+
+      // Hide error message after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -120,6 +161,23 @@ const ContactForm = () => {
               placeholder="Tell me about your project or just say hello!"
             />
           </div>
+
+          {/* Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
+              <CheckCircle className="w-5 h-5" />
+              <span>Message sent successfully! I'll get back to you soon.</span>
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+              <AlertCircle className="w-5 h-5" />
+              <span>
+                Error sending message. Please try again or contact me directly.
+              </span>
+            </div>
+          )}
 
           <button
             type="submit"
