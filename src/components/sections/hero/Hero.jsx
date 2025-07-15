@@ -23,6 +23,13 @@ const Hero = () => {
     }
   };
 
+  const scrollToProjects = () => {
+    const projectsSection = document.querySelector('#projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-mesh-gradient">
       {/* Enhanced background pattern */}
@@ -98,7 +105,12 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-slide-up"
             style={{ animationDelay: '0.6s' }}
           >
-            <button className="btn-primary animate-glow">View My Work</button>
+            <button
+              onClick={scrollToProjects}
+              className="btn-primary animate-glow"
+            >
+              View My Work
+            </button>
             <button className="btn-secondary">Download CV</button>
           </div>
 
