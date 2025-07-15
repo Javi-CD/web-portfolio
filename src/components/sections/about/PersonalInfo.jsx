@@ -31,9 +31,9 @@ const PersonalInfo = () => {
           </p>
 
           <p>
-            When I&apos;m not coding, you&apos;ll find me exploring new technologies,
-            contributing to open-source projects, or sharing knowledge with the
-            developer community.
+            When I&apos;m not coding, you&apos;ll find me exploring new
+            technologies, contributing to open-source projects, or sharing
+            knowledge with the developer community.
           </p>
         </div>
 

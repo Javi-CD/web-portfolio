@@ -49,8 +49,8 @@ const ContactForm = () => {
           month: 'long',
           day: 'numeric',
           hour: '2-digit',
-          minute: '2-digit'
-        })
+          minute: '2-digit',
+        }),
       };
 
       // Send email using EmailJS
@@ -166,7 +166,9 @@ const ContactForm = () => {
           {submitStatus === 'success' && (
             <div className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
               <CheckCircle className="w-5 h-5" />
-              <span>Message sent successfully! I'll get back to you soon.</span>
+              <span>
+                Message sent successfully! I&apos;ll get back to you soon.
+              </span>
             </div>
           )}
 
