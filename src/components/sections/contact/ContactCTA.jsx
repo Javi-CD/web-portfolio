@@ -11,8 +11,8 @@ const ContactCTA = () => {
           Ready to start a project?
         </h3>
         <p className="text-neutral-400 mb-6">
-          I&apos;m available for freelance work and full-time opportunities. Let&apos;s
-          build something amazing together!
+          I&apos;m available for freelance work and full-time opportunities.
+          Let&apos;s build something amazing together!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

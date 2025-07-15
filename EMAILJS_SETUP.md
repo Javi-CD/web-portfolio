@@ -3,11 +3,13 @@
 ## Steps to configure EmailJS:
 
 ### 1. Create EmailJS account
+
 1. Go to [https://www.emailjs.com/](https://www.emailjs.com/)
 2. Sign up with your email
 3. Verify your account
 
 ### 2. Configure email service
+
 1. In the dashboard, go to **Email Services**
 2. Click **Add New Service**
 3. Select your email provider (Gmail, Outlook, etc.)
@@ -15,6 +17,7 @@
 5. **Copy the Service ID** that is generated
 
 ### 3. Create email template
+
 1. Go to **Email Templates**
 2. Click **Create New Template**
 3. Use this template as a base:
@@ -40,11 +43,13 @@ This message was sent from your contact form.
 4. **Copy the Template ID** that is generated
 
 ### 4. Get Public Key
+
 1. Go to **Account** → **General**
 2. Find your **Public Key**
 3. Copy it
 
 ### 5. Configure environment variables
+
 Edit the `.env.local` file with your credentials:
 
 ```env
@@ -56,11 +61,13 @@ NEXT_PUBLIC_TO_NAME=Your Name
 ```
 
 ### 6. Restart development server
+
 ```bash
 npm run dev
 ```
 
 ## Available template variables:
+
 - `{{from_name}}` - Sender's name
 - `{{from_email}}` - Sender's email
 - `{{subject}}` - Message subject
@@ -69,10 +76,12 @@ npm run dev
 - `{{date}}` - Date and time when message was sent
 
 ## Free plan limits:
+
 - 200 emails per month
 - Perfect for a personal portfolio
 
 ## Troubleshooting:
+
 - If you don't receive emails, check your spam folder
 - Verify that environment variables are correctly configured
 - Make sure the email service is active in EmailJS

@@ -4,7 +4,9 @@ import { contactInfo } from '../../../data/contactInfo';
 const ContactInfo = () => {
   return (
     <div className="glass-card p-8 rounded-xl">
-      <h3 className="text-xl font-medium text-white mb-6">Let&apos;s Connect</h3>
+      <h3 className="text-xl font-medium text-white mb-6">
+        Let&apos;s Connect
+      </h3>
 
       <p className="text-neutral-300 mb-8 leading-relaxed">
         I&apos;m always interested in new opportunities and exciting projects.
