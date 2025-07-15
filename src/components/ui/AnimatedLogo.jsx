@@ -5,7 +5,7 @@ const AnimatedLogo = () => {
 
   return (
     <div
-      className="relative cursor-pointer"
+      className="relative cursor-pointer animate-slide-up"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -16,7 +16,9 @@ const AnimatedLogo = () => {
             <span
               key={index}
               className={`inline-block transition-all duration-300 ${
-                isHovered ? 'transform -translate-y-1 text-cyan-400' : ''
+                isHovered
+                  ? 'transform -translate-y-1 text-cyan-400 text-glow animate-glow'
+                  : ''
               }`}
               style={{
                 transitionDelay: isHovered
@@ -32,7 +34,9 @@ const AnimatedLogo = () => {
         {/* Hyphen */}
         <span
           className={`text-xl md:text-2xl font-bold transition-all duration-300 ${
-            isHovered ? 'text-emerald-400 scale-110' : 'text-slate-400'
+            isHovered
+              ? 'text-emerald-400 scale-110 text-glow animate-glow'
+              : 'text-slate-400'
           }`}
         >
           -
@@ -44,7 +48,9 @@ const AnimatedLogo = () => {
             <span
               key={index}
               className={`inline-block transition-all duration-300 ${
-                isHovered ? 'transform translate-y-1 text-cyan-400' : ''
+                isHovered
+                  ? 'transform translate-y-1 text-cyan-400 text-glow animate-glow'
+                  : ''
               }`}
               style={{
                 transitionDelay: isHovered
@@ -58,10 +64,17 @@ const AnimatedLogo = () => {
         </span>
       </div>
 
-      {/* Underline effect */}
+      {/* Enhanced underline effect */}
       <div
-        className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-500 ${
-          isHovered ? 'w-full' : 'w-0'
+        className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400 transition-all duration-500 ${
+          isHovered ? 'w-full animate-glow' : 'w-0'
+        }`}
+      />
+
+      {/* Glow effect background */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-indigo-400/10 to-emerald-400/10 rounded-lg transition-all duration-500 ${
+          isHovered ? 'opacity-100 scale-110' : 'opacity-0 scale-100'
         }`}
       />
     </div>

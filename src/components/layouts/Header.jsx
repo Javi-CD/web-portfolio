@@ -16,8 +16,8 @@ const Header = () => {
   const navItems = [
     { href: '#about', label: 'About' },
     { href: '#skills', label: 'Skills' },
+    { href: '#companies', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
-    { href: '#experience', label: 'Experience' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -25,7 +25,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-neutral-900/95 backdrop-blur-md border-b border-neutral-800'
+          ? 'glass-card border-b border-neutral-800/50'
           : 'bg-transparent'
       }`}
     >
@@ -35,14 +35,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-neutral-300 hover:text-indigo-400 transition-colors duration-300 relative group font-medium"
+                className="text-neutral-300 hover:text-indigo-400 transition-colors duration-300 relative group font-medium animate-slide-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-400 to-purple-400 transition-all duration-300 group-hover:w-full animate-glow"></span>
               </a>
             ))}
           </div>
@@ -79,13 +80,14 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-neutral-900/95 backdrop-blur-md border-t border-neutral-800">
+          <div className="md:hidden glass-card border-t border-neutral-800/50 animate-slide-up">
             <nav className="container mx-auto px-4 md:px-6 py-4 flex flex-col space-y-4">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-neutral-300 hover:text-indigo-400 transition-colors duration-300 font-medium"
+                  className="text-neutral-300 hover:text-indigo-400 transition-colors duration-300 font-medium animate-fade-scale"
+                  style={{ animationDelay: `${index * 50}ms` }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}

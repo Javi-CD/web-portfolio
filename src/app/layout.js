@@ -1,25 +1,18 @@
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Javi - Full Stack Developer',
+  title: 'Javi-CD - Backend Developer',
   description:
-    'Portfolio de Javi - Desarrollador Full Stack especializado en tecnologías modernas',
-  keywords: [
-    'desarrollador',
-    'full stack',
-    'react',
-    'node.js',
-    'javascript',
-    'typescript',
-  ],
-  authors: [{ name: 'Javi' }],
+    'Javi-CD Portfolio - Backend Developer with a passion for clean code',
+  keywords: ['developer', 'backend', 'react', 'node.js', 'javascript', 'next'],
+  authors: [{ name: 'Javi-CD' }],
   openGraph: {
-    title: 'Javi - Full Stack Developer',
+    title: 'Javi - Backend Developer',
     description:
-      'Portfolio de Javi - Desarrollador Full Stack especializado en tecnologías modernas',
+      'Javi-CDs Portfolio - Backend Developer with a passion for clean code',
     type: 'website',
   },
 };
