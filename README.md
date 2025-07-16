@@ -18,7 +18,7 @@
 <div align="center">
 <i>A modern and responsive web portfolio built with cutting-edge technologies</i>
 
-[Live Demo](https://javier-perez.github.io/web-portfolio) • [Documentation](https://github.com/javier-perez/web-portfolio/wiki) • [Report Bug](https://github.com/Javi-CD/web-portfolio/issues)
+[Live Demo](https://web-portfolio-eta-lyart.vercel.app/) • [Report Bug](https://github.com/Javi-CD/web-portfolio/issues)
 
 ## </div>
 
