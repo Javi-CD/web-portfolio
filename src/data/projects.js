@@ -37,7 +37,7 @@ export const projects = [
       'Railway',
     ],
     github: 'https://github.com/Dksoluciones/Notebook_DK',
-    demo: 'https://notebook-dk.vercel.app/login',
+    demo: 'https://notebook.grupodk.com.co',
     featured: false,
     isPrivate: true,
     company: 'Grupo Dk Soluciones',
