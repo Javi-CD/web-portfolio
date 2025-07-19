@@ -36,9 +36,13 @@ You have received a new message from your web portfolio:
 **Message:**
 {{message}}
 
----
 This message was sent from your contact form.
 ```
+
+> [!NOTE]
+> In the `./templates` directory you can find a more personalized template, you > > just have to copy the content of `emailMessage.html`, you can see the result in > the [preview](./templates//imgEmailMessage.png)
+
+---
 
 4. **Copy the Template ID** that is generated
 
