@@ -42,9 +42,10 @@ export const projects = [
     isPrivate: true,
     company: 'Grupo Dk Soluciones',
   },
+
   {
-    id: 3,
-    title: 'Dinamica-apoya-gana',
+    id: 4,
+    title: 'Dinámica DK',
     description:
       'Robust backend developed with RESTful architecture for complete management of digital raffles',
     technologies: [
@@ -60,10 +61,33 @@ export const projects = [
       'Nodemailer',
       'Railway',
     ],
-    github: 'https://github.com/Dksoluciones/dinamica-apoya-gana',
-    demo: 'https://todosjuntos.grupodk.com.co',
+    demo: 'https://dinamica.grupodk.com.co',
     featured: false,
     isPrivate: true,
     company: 'Grupo Dk Soluciones',
   },
+
+  // {
+  //   id: 4,
+  //   title: 'Dinámica Apoya y Gana',
+  //   description:
+  //     'Robust backend developed with RESTful architecture for complete management of digital raffles',
+  //   technologies: [
+  //     'Express.js',
+  //     'Node.js',
+  //     'PostgreSQL',
+  //     'TypeScript',
+  //     'JWT',
+  //     'Zod',
+  //     'BcryptJs',
+  //     'Multer',
+  //     'Swagger',
+  //     'Nodemailer',
+  //     'Railway',
+  //   ],
+  //   demo: 'https://todosjuntos.grupodk.com.co',
+  //   featured: false,
+  //   isPrivate: true,
+  //   company: 'Grupo Dk Soluciones',
+  // },
 ];
