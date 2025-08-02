@@ -12,16 +12,27 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC.svg)](https://tailwindcss.com/)
 
 </p>
-
 </div>
 
 <div align="center">
 <i>Looking for a scalable, consistent solution with clean code and other great features?</i>
 <i> What are you waiting for when you contact me?</i>
 
+<div align="center">
+<a href="https:/github.com/Javi-Cd" target="_blank">
+    <img width="35" height="35" src="https://img.icons8.com/fluency/48/github.png" alt="github"/>
+  </a>
+<a href="https://wa.me/573159606370">
+    <img width="35" height="35" src="https://img.icons8.com/office/40/whatsapp--v3.png" alt="whatsapp--v3"/>
+  </a>
+<a href="mailto:javierperezviloria07@gmail.com">
+    <img width="35" height="35" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new"/>
+</a>
+</div>
+
 [Live Demo](https://web-portfolio-eta-lyart.vercel.app/) • [Report Bug](https://github.com/Javi-CD/web-portfolio/issues)
 
-## </div>
+</div>
 
 ---
 
