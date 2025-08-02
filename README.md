@@ -16,7 +16,8 @@
 </div>
 
 <div align="center">
-<i>A modern and responsive web portfolio built with cutting-edge technologies</i>
+<i>Looking for a scalable, consistent solution with clean code and other great features?</i>
+<i> What are you waiting for when you contact me?</i>
 
 [Live Demo](https://web-portfolio-eta-lyart.vercel.app/) • [Report Bug](https://github.com/Javi-CD/web-portfolio/issues)
 
